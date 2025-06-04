@@ -1,0 +1,13 @@
+# Python bytecode
+__pycache__/
+
+# Virtual environments
+.venv/
+
+# Environment variable files
+.env
+
+# UV (universal virtualenv manager)
+uv.lock
+.python-version
+
