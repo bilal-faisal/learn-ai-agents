@@ -28,7 +28,7 @@ cd openai-agents-sdk/01_agents_basics
 
 ```bash
 uv venv
-uv pip install
+uv sync
 ```
 
 ### 3. Create Your .env File
