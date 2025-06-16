@@ -5,7 +5,7 @@ Welcome to the basics of the OpenAI Agents SDK. This module demonstrates three d
 ## 📁 Project Structure
 
 ```
-agents_basics/
+01_openai_agents_sdk_basics/
 ├── case1.py           # Global default client configuration
 ├── case2.py           # Agent-specific model setup
 ├── case3.py           # Dynamic model injection via RunConfig
@@ -20,8 +20,8 @@ agents_basics/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/bilal-faisal/openai-agents-sdk.git
-cd openai-agents-sdk/01_agents_basics
+git clone https://github.com/bilal-faisal/learn-ai-agents.git
+cd learn-ai-agents/01_openai_agents_sdk_basics
 ```
 
 ### 2. Set Up the Environment with uv
@@ -59,7 +59,7 @@ python case3.py   # Runtime-configured model via RunConfig
 
 This project uses:
 
-- `openai-agents-sdk`
+- `openai-agents`
 - `rich`
 - `python-dotenv`
 
