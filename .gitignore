@@ -11,3 +11,8 @@ __pycache__/
 uv.lock
 .python-version
 
+# Chainlit secret folders
+.chainlit
+
+# Temporary not adding litellm files
+03_litellm/
