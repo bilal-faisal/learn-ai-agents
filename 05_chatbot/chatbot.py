@@ -65,8 +65,8 @@ async def on_chat_end():
 
 @cl.on_message
 async def on_message(message: cl.Message):
-    response = cl.Message(content="Thinking...")
-    await response.send()
+    msg = cl.Message(content="Thinking...")
+    await msg.send()
 
     chat_history = cl.user_session.get("chat_history", []) or []
     agent: Agent = cast(Agent, cl.user_session.get("agent"))
@@ -78,24 +78,30 @@ async def on_message(message: cl.Message):
         }
     )
 
-    result = Runner.run_sync(
-        starting_agent=agent,
-        input=chat_history,
-    )
+    try:
+        result = Runner.run_sync(
+            starting_agent=agent,
+            input=chat_history,
+        )
 
-    agent_response = result.final_output
+        agent_response = result.final_output
 
-    chat_history.append(
-        {
-            "role": "assistant",
-            "content": agent_response,
-        }
-    )
+        chat_history.append(
+            {
+                "role": "assistant",
+                "content": agent_response,
+            }
+        )
 
-    response.content = agent_response
-    await response.update()
+        msg.content = agent_response
+        await msg.update()
 
-    cl.user_session.set("chat_history", chat_history)
+        cl.user_session.set("chat_history", chat_history)
+
+    except Exception as e:
+        print(f"[bold red]Error during message processing: {e}[/bold red]")
+        msg.content = "An error occurred while processing your message."
+        await msg.update()
 
 
 @cl.set_chat_profiles  # type: ignore
