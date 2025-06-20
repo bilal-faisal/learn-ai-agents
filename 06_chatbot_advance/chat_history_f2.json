@@ -1,0 +1,53 @@
+[
+  [
+    {
+      "role": "user",
+      "content": "I want to find a student by their roll number."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, what is the roll number of the student you are looking for?\n"
+    },
+    {
+      "role": "user",
+      "content": "2"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, I found a student with roll number 2. The student's name is Fatima Ali, age is 22, grade is B, and major is Mathematics.\n"
+    }
+  ],
+  [],
+  [
+    {
+      "role": "user",
+      "content": "Can you tell me the student details for roll number 1 andwhat's the weather in Lahore?"
+    },
+    {
+      "role": "assistant",
+      "content": "The current weather in Lahore is sunny with a temperature of 25\u00b0C.\n"
+    }
+  ],
+  [
+    {
+      "role": "user",
+      "content": "Can you tell me the student details for roll number 1 andwhat's the weather in Lahore?"
+    },
+    {
+      "role": "assistant",
+      "content": "The current weather in Lahore is sunny with a temperature of 25\u00b0C.\n"
+    }
+  ],
+  [],
+  [
+    {
+      "role": "user",
+      "content": "Can you tell me the student details for roll number 1 andwhat's the weather in Lahore?"
+    },
+    {
+      "role": "assistant",
+      "content": "The current weather in Lahore is sunny with a temperature of 25\u00b0C.\n"
+    }
+  ],
+  []
+]
