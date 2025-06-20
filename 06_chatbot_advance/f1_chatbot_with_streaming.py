@@ -50,8 +50,8 @@ async def on_chat_end():
     new_chat_history = cl.user_session.get("chat_history", []) or []
 
     # Load existing chat history if file exists
-    if os.path.exists("chat_history.json"):
-        with open("chat_history.json", "r") as f:
+    if os.path.exists("chat_history_f1.json"):
+        with open("chat_history_f1.json", "r") as f:
             all_chats = json.load(f)
     else:
         all_chats = []
@@ -60,7 +60,7 @@ async def on_chat_end():
     all_chats.append(new_chat_history)
 
     # Write back the updated list
-    with open("chat_history.json", "w") as f:
+    with open("chat_history_f1.json", "w") as f:
         json.dump(all_chats, f, indent=2)
 
 
